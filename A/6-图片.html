@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul li{
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			border: 1px solid #aaa;
+			list-style: none;
+			float: left;
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+	<img id="pic" src="image/1.jpg" alt="">
+
+
+	<ul>
+		<li class="a">1</li>
+		<li class="b">2</li>
+		<li class="c">3</li>
+		<li class="d">4</li>
+		<li class="e">5</li>
+	</ul>
+	
+	
+
+	<!-- <div class="shu"> -->
+	<!-- <button class="a">1</button> -->
+	<!-- <button class="b">2</button> -->
+	<!-- <button class="c">3</button> -->
+	<!-- <button class="d">4</button> -->
+	<!-- <button class="e">5</button> -->
+	<!-- </div> -->
+
+	<script src="script/jquery.js"></script>
+	<script>
+		$(".b").click(function(){
+			$("#pic").attr("src","image/6.jpg");
+		})
+		$(".c").click(function(){
+			$("#pic").attr("src","image/0.jpg");
+		})
+		$(".d").click(function(){
+			$("#pic").attr("src","image/2.jpg");
+		})
+		$(".e").click(function(){
+			$("#pic").attr("src","image/3.jpg");
+		})
+		$(".a").click(function(){
+			$("#pic").attr("src","image/1.jpg");
+		})
+		
+	</script>
+</body>
+</html>

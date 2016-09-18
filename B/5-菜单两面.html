@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.nav li{
+			width: 100px;
+			height: 20px;
+			border: 1px solid red;
+			float: left;
+			list-style: none;
+			overflow: hidden;
+			margin-top: 50px;
+		}
+		span,a{
+			display: block;
+			text-align: center;
+			width: 100px;
+			height: 20px;
+		}
+		span{
+			background-color: #f00;
+		}
+		a{
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<ul class="nav">
+		<li>
+			<div>
+				<span>首页</span>
+				<a href="">首页</a>
+			</div>
+		</li>
+		<li>
+			<div>
+				<span>首页</span>
+				<a href="">首页</a>
+			</div>
+		</li>
+		<li>
+			<div>
+				<span>首页</span>
+				<a href="">首页</a>
+			</div>
+		</li>
+		<li>
+			<div>
+				<span>首页</span>
+				<a href="">首页</a>
+			</div>
+		</li>
+	</ul>
+
+
+
+	<script src="script/jquery.js"></script>
+	<script>
+		$(".nav li").mouseenter(function(){
+			$(this).find("div").animate({"margin-top":"-20px"},500);
+		}).mouseleave(function(){
+			$(this).find("div").animate({"margin-top":"0px"},500);
+		})
+
+	</script>
+</body>
+</html>

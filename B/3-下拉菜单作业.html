@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.clear{
+			clear: both;
+		}
+		.top ul li{
+			list-style: none;
+			width: 100px;
+			height: 40px;
+			border: 1px solid red;
+			text-align: center;
+			line-height: 40px;
+			float: left;
+		}
+		.bottom .bottom0,.bottom .bottom1,.bottom .bottom2{
+			width: 100px;
+			height: 100px;
+			border: 1px solid red;
+			display: none;
+		}
+		.bottom .bottom0{
+			position: absolute;
+			left: 0px;
+		}
+		.bottom .bottom1{
+			position: absolute;
+			left: 102px;
+		}
+		.bottom .bottom2{
+			position: absolute;
+			left: 204px;
+		}
+		.bottom .bottom0 li,.bottom .bottom1 li,.bottom .bottom2 li{
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="top">
+		<ul>
+			<li>女装</li>
+			<li>男装</li>
+			<li>童装</li>
+		</ul>
+	</div>
+	<div class="clear"></div>
+	<div class="bottom">
+		<div class="bottom0">
+			<ul>
+				<li>T恤</li>
+				<li>牛仔裤</li>
+				<li>连衣裙</li>
+				<li>半身裙</li>
+				<li>高跟鞋</li>
+			</ul>
+		</div>
+		<div class="bottom1">
+			<ul>
+				<li>T恤</li>
+				<li>牛仔裤</li>
+				<li>上衣</li>
+				<li>衬衫</li>
+				<li>皮鞋</li>
+			</ul>
+		</div>		
+		<div class="bottom2">
+			<ul>
+				<li>T恤</li>
+				<li>牛仔裤</li>
+				<li>连衣裙</li>
+				<li>半身裙</li>
+				<li>高跟鞋</li>
+			</ul>
+		</div>		
+	</div>
+
+
+
+	<script src="script/jquery.js"></script>
+	<script>
+		$(".top ul li").mouseenter(function(){
+			var ind = $(this).index()
+			var bot = ".bottom"+ind
+			$(bot).slideDown(500);
+		}).mouseleave(function(){
+			var ind = $(this).index()
+			var bot = ".bottom"+ind
+			$(bot).slideUp(500);
+		})
+	</script>
+</body>
+</html>

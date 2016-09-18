@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0 ;
+			padding: 0;
+		}
+		.bigbox{
+			width: 300px;
+			height: 300px;
+			border: 1px solid red;
+			margin: 0 auto;
+		}
+		.sbox{
+			width: 98px;
+			height: 50px;
+			border: 1px solid red;
+			float: left;
+			line-height: 50px;
+			text-align: center;
+			cursor: pointer;
+		}
+		.z .active{
+			display: none;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="bigbox">
+		<div class="sbox" style="background-color:#aaa;">选项1</div>
+		<div class="sbox">选项2</div>
+		<div class="sbox">选项3</div>
+		<div class="z">
+			<h1>内容一</h1>
+	    	<h1 class="active">内容二</h1>
+	    	<h1 class="active">内容三</h1>
+	    </div>	
+	</div>
+	<script src="script/jquery.js"></script>
+	<script>
+		$(".bigbox .sbox").click(function(){
+			var i = $(this).index();
+			$(".bigbox .z h1").eq(i).removeClass("active").siblings().addClass("active");
+
+
+			$(this).css("background-color","#aaa").siblings().css("background-color","#fff")
+		})	
+	</script>
+</body>
+</html>

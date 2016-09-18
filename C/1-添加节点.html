@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="">
+		<input type="text" class="txt">
+		<input type="button" class="but" value="添加">
+	</form>
+	<ul id="list">
+		<li>苹果    <span>删除</span></li></li>
+		<li class="banana">香蕉    <span>删除</span></li></li>
+		<li>西瓜         <span>删除</span></li>
+		<li>鸭梨         <span>删除</span></li>
+		<li>水蜜桃       <span>删除</span></li>
+		<li>荔枝         <span>删除</span></li>
+
+	</ul>
+
+
+
+	<script src="script/jquery.js"></script>
+	<script>
+		$(".but").click(function(){
+			var value = $(".txt").val();
+			var cont = "<li>" + value + "</li>"
+			// $("#list").append(cont)
+			// $("#list").prepend(cont)
+			// $("#list .banana").before(cont)
+			$("#list .banana").after(cont)   /*没有绑定remove事件*/
+		})
+
+		$("#list li").click(function(){
+			$(this).remove()
+		})
+		/*$("#list li span").click(function(){
+			// var ind = $(this).index();
+			// alert(ind)
+			// $("#list "ind).remove()是错的，不在同级！
+			$(this).parent().remove()
+		})*/
+	</script>
+</body>
+</html>
